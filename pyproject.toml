@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webmcp-gen"
+version = "0.6.1"
+description = "Auto-generate WebMCP tool definitions from any website — no site owner cooperation needed"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = ["webmcp", "mcp", "ai-agents", "web-automation", "playwright"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "playwright>=1.40",
+    "httpx>=0.25",
+    "mcp>=1.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.23",
+    "pytest-timeout>=2.2",
+]
+
+[project.scripts]
+webmcp-gen = "webmcp_gen.cli:main"
+webmcp-compare = "webmcp_gen.compare:main"
+webmcp-benchmark = "webmcp_gen.benchmark:main"
+webmcp-serve = "webmcp_gen.serve:main"
+webmcp-login = "webmcp_gen.session:main"
+webmcp-workflow = "webmcp_gen.workflow:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+timeout = 60
+
+[tool.setuptools.packages.find]
+include = ["webmcp_gen*"]
