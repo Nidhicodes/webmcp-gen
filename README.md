@@ -6,6 +6,8 @@
 
 **Point it at any website. Get back tools an AI agent can actually call.**
 
+![webmcp-gen demo](assets/demo.gif)
+
 ```bash
 webmcp-gen https://news.ycombinator.com --groq
 ```
