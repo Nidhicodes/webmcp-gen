@@ -1,5 +1,9 @@
 # webmcp-gen
 
+[![PyPI](https://img.shields.io/pypi/v/webmcp-gen)](https://pypi.org/project/webmcp-gen/)
+[![Python](https://img.shields.io/pypi/pyversions/webmcp-gen)](https://pypi.org/project/webmcp-gen/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Point it at any website. Get back tools an AI agent can actually call.**
 
 ```bash
